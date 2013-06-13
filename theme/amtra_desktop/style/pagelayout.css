@@ -1,0 +1,612 @@
+/****
+ * Three column floating div layout with 2,1,3 column order
+ * Based on: http://matthewjamestaylor.com/blog/holy-grail-no-quirks-mode.htm
+ * And:  http://matthewjamestaylor.com/blog/ultimate-3-column-holy-grail-pixels.htm
+ *
+ * #page
+ *   #page-header
+ *   #page-content
+ *   |  #region-main-box
+ *   |    #region-post-box
+ *   |      #region-main-wrap
+ *   |      |  #region-main
+ *   |      |    .region-content
+ *   |      #region-pre
+ *   |      |  .region-content
+ *   |      #region-post
+ *   |      |  .region-content
+ *   #page-footer
+ *
+ * The body tag may also contain one of three layout specific classes that describe
+ * the regions of the page and allow us to theme more easily.
+ *
+ *   default (no class) = Content + side pre + side post
+ *   side-pre-only      = Content + side pre
+ *   side-post-only     = Content + side post
+ *   content-only       = Content
+ *
+ ****/
+ 
+/**** Back ground colours ****/
+ 
+/*Dark - #e0ecfa
+
+Mid - #f0edea
+
+Mid 2 -#F7F5F4
+
+Light - f7f5f4
+
+Very light - #f6fafe
+
+links - #804141*/
+
+html {
+	background:#f0edea;/*carl changes BG colour - default = none*/
+	/*opacity:0.4; carl - changes transparency of everything, not just BG - default - none - setting for firefox*/
+	 /*filter:alpha(opacity=40); carl - changes transparency of everything, not just BG - default - none -For IE8 and earlier */
+	}
+
+body {
+	margin:auto 0px;
+	width:auto;
+	background:#fff ;/*carl changes BG colour - default = none*/
+	font-size:0.95em !important; /*carl - changes all font sizes - default too small*/
+}
+
+body, div {
+	/*background:#fff ;carl changes BG colour - default = none, removing colour gets rid of white BG in links in sideblocks*/
+}
+
+#page {
+	width:100%;position:relative; /*changing this breaks dock*/
+	/*width:96%;carl - reduces main content width to fit side margins - default = 100%* !changing this breaks dock! */
+	/*margin-left:2%;carl - adds gap on left side of main content*/
+	/*margin-right:2%;carl - adds gap on right side of main content*/
+} 
+
+
+#page-header {
+	float:left;
+	/*width:100%; carl - default for width*/
+	width:96%; /*carl - sets width of header and menu so its possible to have margin on either side without effecting dock*/
+	margin-left:2%;
+	margin-right:2%;
+	background: url([[pix:theme|small-amtra-logo]]); /*carl - adds logo - Default = none*/
+	background-repeat: no-repeat;
+	background-position: right 27px;/*background-position:center ; carl - makes logo central no matter what size screen is*/
+}
+
+#page-content {
+	clear:both;
+	float:left;
+	overflow:hidden;
+	position:relative;
+	width:100%;
+	min-width:880px; /*carls change - allows main conetn to be narrower - default = 900px*/
+	background:#fff; /*carl - fills in missing section of BG below left blocks - default = none*/
+	/*border:1px solid #ccc; carl - adds border around content but doesn't line-up with nav bar - default = none*/
+}
+
+#page-content {
+	width:96%; /*carl - sets width of main content so its possible to have margin on either side without effecting dock*/
+	margin-left:2%;
+	margin-right:2%;
+}
+
+#page-content #region-main-box {
+	float:left;
+	left:200px;
+	position:relative;
+	width:200%;
+	background:#fff; /*carl - changes BB of central content and reight-hand column - default = none*/
+}
+
+#page-content #region-post-box {float:left;left:50%;margin-left:-400px;position:relative;width:100%;}
+
+#page-content #region-main-wrap {
+	float:right;
+	position:relative;
+	right:100%;
+	width:50%;
+	background:#fff; /*carl - changes BG behind all of left column and central area*/
+	margin-left:400px;
+}
+
+#page-content #region-main {
+	margin-right:0px;
+	margin-left:400px; /*carl - adjust this to match side column widths from #page-content #region-pre - default = 400px*/
+	overflow:hidden;
+}
+
+#region-main {
+	padding-left:10px; /*carl - adds left padding to content in admin/users pages*/
+}
+
+#page-content #region-pre {
+	float:left;
+	left:200px;
+	overflow:hidden;
+	position:relative;
+	width:210px; /*carl - changes width of left column - need to adapt #page-content #region-main to fit after changing - default = 200px*/
+	margin-left:-50%;
+}
+
+#page-content #region-post {float:left;left:0px;overflow:hidden;position:relative;width:200px;}
+
+#page-content .region-content {
+	overflow:hidden;
+	padding-top: 10px; /* carl - increases gap between menu and side blocks default = 10xp*/
+	padding-right: 5px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+}
+
+#page-footer {
+	clear:both;
+	float:left;
+	width:100%;
+}
+
+#region-main-box { /*carl - changes central content area*/
+	/*width:300px;
+ 	border:#000 1px solid;*/
+}
+
+#page-content #region-pre .region-content { /*carl - changes section of left side bar containing blocks but not all the way to the footer and hidden by central content
+	width:210px;
+ 	border:#C00 1px solid;
+	margin-right:100px; */
+	/*background:#FFF; carl - changes BG colour of left column*/
+}
+
+ul.topics li {
+/*	border:#ccc dotted 1px; carl - adds border to topic areas - default = none*/
+}
+
+ul.weeks li {
+/*	border:#ccc dotted 1px; carl - adds border to topic areas - default = none*/
+}
+
+/****calendar layout****/
+
+#page-calendar-view #page-content { 
+	background:#fff; /*carl - fixes missing section of BG on main calendar page default = none*/
+}
+
+/**** Glossary ****/
+#page-mod-glossary-view #page-content #region-main .region-content {
+	/*border:#CCC 1px dotted; carl adds border to all glossary content - default = none*/
+	margin-top:10px; /*carl - moves top of glossary down to level with side blocks - default = none*/
+	width:98%; /*carl - makes gap between right of nav blocks and edge of page the same - default = no setting*/
+}
+
+#page-mod-glossary-view #intro.generalbox {
+	background:#f7f5f4; /*carl - adds BG to glossary Intro - default = none*/
+	margin-top:-2px;/*carl - makes glossary intro box top level with side blocks - default = none*/
+	padding 10px;/*carl - adds padding to glossary intro box - default = none*/
+	border:#CCC 1px dotted;
+}
+
+#page-mod-glossary-view .concept h3  {
+	text-align:center; 
+}
+
+#page-mod-glossary-view .concept {
+	border-bottom:1px dotted #ccc;
+	background:#f7f5f4; /*carl - adds BG to entry headings - default = none*/
+	padding-left:1px;
+	padding-top: 3px;
+	padding-right: 1px;
+	padding-bottom: 3px;
+	margin-top:0px;
+}
+
+#page-mod-glossary-view .entry {
+	/*background:#f2f7fc; carl - adds BG glossary entry boxes - default = none*/
+	padding-left:0px; /*carl - makes heading flush to edge of main glossary boxes*/
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 3px;
+	font-size:0.9em; /*carl - alter glossary text size - default = none*/
+}
+
+#page-mod-glossary-view .no-overflow {
+    padding:5px; /*carl - adds padding to main glossary text - default = none*/
+}
+
+#page-mod-glossary-view .entryheader { /*carl gets rid of spaces around glossary headers*/
+	margin:0px;
+	padding:0px;
+	font-size:1em;
+}
+
+#page-mod-glossary-view .time { /*carl - makes last edited time smaller in glossary FAQ*/
+	font-size:0.8em;;
+	font-weight:normal;	
+}
+
+#page-mod-glossary-view .glossarypost {
+	border:#CCC 1px dotted; /*carl - adds border to each glossary post - default = none*/
+	margin-bottom:10px; /*carl - adds gap between entries default = none*/
+}
+
+.path-mod-glossary .glossarypost {
+	width:99%;
+}
+
+.path-mod-glossary .entrybox { /*carl - puts border around box containing all entries and A-Z - default = no setting*/
+    border: 1px dotted #ccc;
+    margin-bottom: 0;
+    margin-top: 20px;
+    padding: 1%;
+	width:98%;
+}
+
+#page-mod-glossary-view .entrybox hr { /*carl changes colour of horizontal rule below glossary A-Z - default = no setting*/
+	noshade:noshade;
+	height:1px;
+	border:1px dotted #ccc;
+}
+
+#page-mod-glossary-view .entrybox a {
+	text-decoration:none;
+	color:#804141;
+	font-weight:bold;
+}
+
+#page-mod-glossary-view .entrybox a:hover {
+	color:#900;
+}
+
+#page-mod-glossary-view .tabtree {
+    border-bottom: 1px dotted #CCCCCC;
+    margin-bottom: 0px; /*carl - gets rid of gap below row of tabs in glossary - default = no setting*/
+    position: relative;
+}
+
+/**** quiz ****/
+
+/****quiz editing ****/
+
+#page-mod-quiz-edit .questionbankwindow div.header { /*carl - tidies up contents block in quiz*/
+	background:#F7F5F4;
+	padding-bottom:3px;
+	border-bottom:#FFF 1px solid;
+}
+
+#page-mod-quiz-edit .questionbankwindow div.header  h2 {
+	color:#000; /*carl - changes color of contents text*/
+}
+
+#page-mod-quiz-edit .questionbankwindow div.header a {
+	color:#069; /*carl - changes color of quiz Hide link*/
+	text-decoration:none;
+}
+
+#page-mod-quiz-edit .questionbankwindow div.header a:hover {
+	color:#900;/*carl - changes color of quiz Hide link on mouse hover - default = none*/
+}
+
+#page-mod-quiz-edit div.container div.generalbox {
+	background:none; /*carl - removes purple BG of box with category drop-down menu in - default = none*/
+}
+
+.questionbankwindow.block {
+	background:#f7f5f4; /*carl - changes BG of box with category drop-down menu in - default = none*/
+}
+
+#quizcontentsblock .helplink { /*removes pointless quiz advice links - default = none*/
+	display:none;
+}
+
+#page-mod-quiz-edit div.question div.content div.points {
+	background:#F7F5F4; /*carl - chnges BG of grade setting - default = none*/
+}
+
+#page-mod-quiz-edit div.quizcontents .statusbar {
+	margin-bottom:10px; /*carl - adds gap above and below total of grades text - default = none*/
+	margin-top:10px;
+}
+
+#page-mod-quiz-edit div.quizcontents #inputmaxgrade {
+	margin-bottom:15px; /*carl - adds gap above and below total of grades text - default = none*/
+}
+
+#page-mod-quiz-edit div.quizpage span.pagetitle {
+	margin-right:100px; /*carl - forces box with editing options below page title - default = none*/
+	font-weight:bold;
+	font-size:1.2em;
+	color:#069;
+	margin-bottom:3px;
+}
+
+#page-mod-quiz-edit div.quizpage .pagecontent {
+	margin-left:0px; /* carl - lines editing options box up with page number title - default = none*/
+	/*width:80%; carl - resizes box with editing options - default = none*/
+}
+
+#page-mod-quiz-edit .addpage {
+	margin-right:4em; /*carl - adjusts position of add page here button - default = none*/
+}
+
+/**** Quiz No. attempts page ****/
+
+#page-mod-quiz-view .quizinfo, #page-mod-quiz-view #page .quizgradefeedback, #page-mod-quiz-view #page .quizattempt {
+    /*text-align: left; carl - moves grading attempts text left - default = none*/
+	/*font-size:1.3em; carl increases grading method text in grading attempts*/ 
+}
+
+#page-mod-quiz-view .quizinfo, #page-mod-quiz-view #page .quizgradefeedback, #page-mod-quiz-view #page .quizattempt p {
+	font-size:1.4em; /*carl increases grading method text in grading attempts without changing text in button - default = none*/
+}
+
+.quizattemptcounts {
+   /*clear: left;
+    text-align: left; carl - moves attempts link left - default = none*/ 
+}
+
+.quizattemptcounts a { /*carl - changes attempts link in grading attempts - default = none*/ 
+	color:#069; 
+	text-decoration:none;
+	font-weight:bold;
+}
+
+.quizattemptcounts a:hover {
+	color:#900; /*carl - changes attempts link colour in grading attempts on mouse hover - default = none*/ 
+}
+
+#page-mod-quiz-view .generaltable.quizattemptsummary a { /*carl - changes review link  in grading attempts - default = none*/ 
+	color:#069; 
+	text-decoration:none;
+	font-weight:bold;
+}
+
+#page-mod-quiz-view .generaltable.quizattemptsummary a:hover {
+	color::#900; /*carl - changes review link colour  in grading attempts on mouse hover - default = none*/ 
+}
+
+#page-mod-quiz-view .generaltable.quizattemptsummary {
+	margin-top:20px; /*carl - changes margin of grading attempts table - default = none*/ 
+	margin-bottom:20px;
+}
+
+#page-mod-quiz-view .generaltable.quizattemptsummary thead {
+    margin-left: auto;
+    margin-right: auto;
+	background:#F7F5F4; /*carl - adds BG to headings in previous attempts table - default = none*/ 
+}
+
+#page-mod-quiz-view .generaltable.quizattemptsummary thead th {
+	border-left:#CCC 1px solid;  /*carl - adds border to headings in previous attempts table - default = none*/ 
+	border-right:#CCC 1px solid;
+	border-top:#CCC 1px solid;
+	border-bottom:#CCC 1px solid;
+}
+
+#page-mod-quiz-view .generaltable.quizattemptsummary td {
+    margin-left: auto;
+    margin-right: auto;
+	background:#f7f5f4;/*carl - adds BG to cells in previous attempts table - default = none*/ 
+	border-left:#CCC 1px solid;  /*carl - adds border to cells in previous attempts table - default = none*/ 
+	border-right:#CCC 1px solid;
+	border-bottom:#CCC 1px solid;
+}
+
+#page-mod-quiz-view .region-content h2.main  {
+	/*font-size:3em; carl - changes font size of headings in attempts table*/
+}
+
+#page-mod-quiz-view .region-content #intro {
+	border: 1px #ccc dotted; /*carl - adds border to attempts intro - default = none*/
+	padding:10px;/*carl - adds padding to attempts intro - default = none*/
+	margin-bottom:20px;
+	/*background:#f7f5f4; /*carl - adds BG to attempts intro - default = none*/
+}
+
+/**** Grade report ****/
+
+#page-grade-report-grader-index table#user-grades {
+    border:#ccc 1px dotted; /*carl - changes grader report main table border - default = none*/
+	font-size:0.9em; /*carl -  changes grader report main font size - default = none*/
+}
+
+#page-grade-report-grader-index table#user-grades .topleft {
+	background:#F7F5F4;
+}
+
+#page-grade-report-grader-index table#user-grades .category {
+	background:#F7F5F4;
+}
+
+#page-grade-report-grader-index table#user-grades th {
+	background:#f2f7fc;
+}
+
+/*#page-grade-report-grader-index table#user-grades #studentheader { carl - changes BG of student name column header on quiz grader report - default = none
+	background:#f2f7fc;
+}*/
+
+/**** wiki layout ****/
+
+#page-mod-wiki-view #intro { 
+	background:#f6fafec; /*carl - changes colour of wiki intro box BG*/
+	border:1px dotted #ccc;/*carl - changes border of wiki intro box*/
+	margin-bottom:20px;/*carl - changes gap wiki intro box and tabs*/
+	padding-top: 10px;/*carl - changes padding of wiki intro box*/
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+}
+
+#page-mod-wiki-view #intro p { 
+	font-weight:normal;
+}
+
+#page-mod-wiki-view .generalbox p { 
+	font-weight:normal;
+}
+
+#page-mod-wiki-view .generalbox a { 
+	font-weight:bold;
+}
+
+
+/**** personal files area ****/
+
+#page-user-files .filemanager-toolbar {
+	margin-bottom:10px; /*carl - adds gap between control buttons and attached files*/
+}
+
+#page-user-files .mform .fitem {
+	border:1px dotted #ccc; /*carl - adds border to files area items*/
+	background:#f2f7fc; /*carl - adds BG to files area items*/
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+#page-user-files .mform .fitem fieldset.felement {
+	margin-left:50px; /*carl - lines save button edge up with Add button*/
+}
+
+#page-user-files .mform .fitem .fitemtitle {
+	width:50px;/*carl - changes position of title*/
+}
+
+#page-user-files .mform .fitem .felement {
+	margin-left:60px; /*carl - changes left position of Add button*/
+}
+
+#page-user-files #page-user-files #page-content .region-content {
+	border:10px dotted #ccc;
+}
+
+#page-user-files mform fieldset div {
+	margin:0px; /*carl - removes margin around containing box;*/
+}
+
+#page-user-files p, fieldset, table, pre  {
+	width:97%; /*carl - sets width for files container*/
+}
+
+/**** URL Resource ****/
+	
+#page-mod-url-view .mod_introbox {
+	border:1px dotted #ccc; /*carl - changes border BG in URL .*/
+	margin-bottom:20px;
+	background:#f6fafe;
+}
+
+
+/** Only side pre **/
+.side-pre-only #page-content #region-post-box {margin-left:-200px;}
+
+.side-pre-only #page-content #region-main {
+	margin-left:200px;
+}
+
+.side-pre-only #page-content #region-pre {left:0px;}
+.side-pre-only #page-content #region-post {width:0px;}
+
+/** Only side post **/
+.side-post-only #page-content #region-main-box {left:0px;}
+.side-post-only #page-content #region-post-box {margin-left:-200px;}
+.side-post-only #page-content #region-main {margin-left:200px;}
+.side-post-only #page-content #region-pre {width:0px;}
+.has_dock.side-post-only .page-middle #region-main {margin-left:200px;}
+
+/** Moving block when side-post-only **/
+.blocks-moving.side-post-only #page-content #region-main-box {left:200px;width:200%;}
+.blocks-moving.side-post-only #page-content #region-post-box {margin-left:-400px;}
+.blocks-moving.side-post-only #page-content #region-main {margin-left:400px;}
+.blocks-moving.side-post-only #page-content #region-pre {left:200px;width:200px;}
+.blocks-moving.side-post-only #page-content #region-post {left:0px;width:200px;}
+
+/** No blocks whatsoever **/
+.content-only #page-content {min-width:0;}
+.content-only #page-content #region-main-box {left:0px;}
+.content-only #page-content #region-post-box {margin-left:0px;}
+.content-only #page-content #region-main {margin-left:0px;}
+.content-only #page-content #region-pre {left:0;width:0px;}
+.content-only #page-content #region-post {width:0;}
+
+/** Stabalise some IE6 behaviour **/
+.ie6 #region-pre .region-content,
+.ie6 #region-post .region-content {padding:0 !important;width:100%;float:none;}
+.ie6 #region-pre .region-content .block,
+.ie6 #region-post .region-content .block {width:auto;padding:0;margin:10px;}
+
+/** Report layout **/
+.pagelayout-report #page {width:auto;position:relative;}
+.pagelayout-report #page-header {float:none;}
+.pagelayout-report #page-content {float:none;overflow:visible;width:auto;}
+.pagelayout-report #report-main-content {float:left;width:100%;}
+.pagelayout-report #report-main-content .region-content {margin-left:200px;}
+.pagelayout-report #report-main-content .region-content table {}
+.pagelayout-report #report-region-wrap {width:0;float:right;position:relative;left:-100%;}
+.pagelayout-report #report-region-pre {width:200px;}
+.pagelayout-report #page-footer {float:none;}
+.pagelayout-report #page-content .region-content {overflow:visible;}
+
+.pagelayout-report #page-content .region-content {overflow:visible;}
+
+/** Correct for content only **/
+.pagelayout-report.content-only #report-main-content .region-content {margin-left:0;}
+
+/** Correct for right to left languages **/
+.dir-rtl.pagelayout-report #report-main-content .region-content {margin-left:0;margin-right:200px;}
+.dir-rtl.pagelayout-report #report-region-wrap {left:0;}
+
+/** Stabalise IE6 behaviour on the report layout **/
+.ie6.pagelayout-report #report-main-content {float:none;width:auto;}
+.ie6.pagelayout-report #report-region-wrap {float:none;width:200px;left:auto;position:absolute;top:0;}
+.ie6.pagelayout-report #report-region-pre,
+.ie6.pagelayout-report #report-region-pre .block {width:100%;}
+
+/**** Messages ****/
+
+#page-message-index #region-main-box {
+}
+
+#page-message-index #page-content .region-content {
+	padding-right:8px;
+}
+
+
+#page-message-index #region-main-box #region-main {
+	background:#f7f5f4;
+	margin-top:10px;
+	margin-right:8px;
+}
+
+#page-message-index .message .messagearea {
+	border:1px dotted #ccc;
+	background:#fff;
+}
+	
+#page-message-index	#combinedsearch {
+	margin-bottom:8px;
+}
+	
+#page-course-view-weeks #page-content #region-pre { /*Carl's change - adds 10px left gap betww left side blocks and main content in weekly layout only*/
+    float: left;
+    margin-left: -50%;
+    overflow: hidden;
+    position: relative;
+    width: 200px;
+}
+	
+
+/*#page-site-index #page-content #region-main { /*carl puts central content in correct position on main index page, not my modules page - default - none
+    margin-left: 410px;
+    margin-right: 0;
+    overflow: hidden;
+}*/
+	
+/********Database*************/
+
+#page-mod-data-view .main { /*carl - puts h2 header top aligined with left blocks - default = no setting*/
+	margin-top:0px
+}
