@@ -1,0 +1,136 @@
+
+.block {
+	border:1px dotted #ccc;/*carl - changes border on side blocks - default = solid*/
+ 	margin-bottom:1em;
+}
+ 
+.block .header h2 {
+	margin:4px;
+	font-size:1em; /*carl - changes size of block header text*/
+	color:#505050; /*carl - changes colour of block header text*/	
+}
+
+.block .header .block_action {float:right;margin:0 4px;vertical-align:top;}
+.block .header .block_action input {margin-right:2px;}
+.block .header .commands {margin-left:4px;}
+.block .header .commands .icon img {width:11px;height:11px;margin-right:1px;}
+
+.block .content {
+	padding:4px; 	
+	background:#eff5fc; /*carl - changes bg of content area of side blocks - default = none*/
+	font-size:0.85em; /*carl - resizes text and links in all side blocks*/
+}
+
+.block .content a {
+	/*carl - changes links in side blocks - default = none*/
+	text-decoration:none;	
+	line-height:1.4em;
+	color:#303763;
+}
+
+.block .content a:hover {
+	/*carl - changes links in side blocks - default = none*/
+	text-decoration:none;
+	line-height:1.4em;
+	color:#900;
+	background:#FFF;
+}
+
+.block.hidden .content {display: none;}
+.block .content .userpicture {width:16px;height:16px;margin-right:4px;}
+.block .content .list li.listentry {clear:both;}
+.block .content .list .c0 {display:inline;}
+.block .content .list .c1 {margin-left:5px;display:inline;}
+
+.block .content .post {
+	background:none;  /*carl - changes bg of text area within side blocks - default = none*/
+}
+
+.block .content .info {
+	background:none;/*carl - changes bg of text area within side blocks - default = none*/
+	/*margin-top:5px; carl - creates margin around forum post info*/
+}
+
+.block .footer {
+	margin-bottom: 4px;
+	background:#eff5fc; /*carl - changes bg of content area of side blocks - default = none*/
+}
+
+.block .blockannotation {font-size:0.75em;margin: -1em 0 1em;}
+
+.block_navigation .block_tree {
+	font-size:1em;/*carl - changes font size of level 1 links in navigation block*/
+}
+
+.block_navigation .block_tree ul li {
+	overflow:visible;
+	/*font-size:0.95em; carl - changes font size of level 2 links in navigation block*/
+	width:140px; /*carl - sets width of menus so words fit closer to the right edge - default - none*/
+}
+
+.block_navigation .block_tree ul li ul li {
+	font-size:1em; /*carl - changes font size of level 3 links in navigation block*/
+	width:130px; /*carl - sets width of sublevels in navigation menu*/
+}
+
+.block_navigation .block_tree ul li ul li ul li {
+	font-size:1em; /*carl - changes font size of level 4 links in navigation block*/
+}
+
+/** block_list blocks need column stuffs **/
+.block.list_block .unlist > li > .column {display:inline-block;}
+.ie6 .block.list_block .unlist .column {display:inline;}
+
+.block.beingmoved {border-width: 2px;border-style: dashed;}
+.blockmovetarget {display: block;height: 1em;margin-bottom: 1em;border-width: 2px;border-style: dashed;}
+
+.block-region .invisible {opacity: 0.5;filter: alpha(opacity=50);}
+
+.block .block-hider-show,
+.block .block-hider-hide {cursor:pointer;}
+.block .block-hider-show,
+.block.hidden .block-hider-hide {display:none;}
+.block.hidden .block-hider-show {display:inline;}
+
+/** Overide for RTL layout **/
+.dir-rtl .block .header,
+.dir-rtl .block h2.header {text-align:right;}
+.dir-rtl .block .header .commands { text-align: right;}
+
+/**** Main Menu Block alterations ****/
+
+.block_site_main_menu p {
+	line-height:2em; /*carl - fixes problem with top of labels being cut off in main menu*/
+	margin-bottom:0px;
+}
+
+.block_site_main_menu a {
+	margin-bottom:1px; /*carl - adds gap between links in main menu*/
+}
+
+.block_site_main_menu .icon {
+	margin-bottom:2px; /*carl - adds gap between icons in main menu*/
+}
+
+.block_site_main_menu .content {
+	padding-top:0px; /*carl - reduces padding abve first reource text in main menu block*/
+}
+
+/**** Tags Block ****/
+
+.block_tags .tag_cloud a {
+	font-size:1.1em; /*carl - changes size of Tags text in tags block*/
+	font-weight:bold;
+}
+
+/**** Messages Block ****/
+
+.block_messages .content .info {
+	 text-align:left;/*carl - moves message block text (not links) to left*/
+}
+
+/**** Online users block ****/
+
+.block_online_users .content .info {
+	text-align:left; /*carl - moves online users block text (not links) to left*/
+}

@@ -1,0 +1,473 @@
+/**
+ * CSS for displaying courses and everything in them
+ */
+.section_add_menus {text-align:right;}
+.section_add_menus .horizontal div,
+.section_add_menus .horizontal form {display:inline;}
+.section_add_menus optgroup {font-weight:normal;font-style: italic;}
+
+.course-content .section .activity img.activityicon {vertical-align:middle;height:16px;width:16px;}
+.course-content .section .activity .commands img.iconsmall {vertical-align: baseline;}
+
+#page-site-index .subscribelink {text-align:right;}
+
+#page-site-index .headingblock {
+    border-top: 1px dotted #CCCCCC;
+    font-size: 1em;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 5px;
+	padding-bottom:5px;
+}
+	
+#page-site-index .clearfloat {float: none;clear: both; height:0px;}
+
+.path-course-view .headingblock {
+	margin-bottom: 0px;
+	background:#e0ecfa;
+	border:#ccc 1px dotted;
+	padding-top: 6px;
+	padding-right: 4px;
+	padding-bottom: 5px;
+	padding-left: 4px;
+	font-size:1em;
+}
+
+.path-course-view .subscribelink {text-align:right;}
+.path-course-view .unread {margin-left: 3em;}
+.path-course-view .block.drag .header {cursor: move;}
+.path-course-view .completionprogress {float:right;}
+.path-course-view .completionprogress img.iconhelp {vertical-align:top;}
+
+.path-course-view li.activity {margin-right:20px; position:relative;}
+.path-course-view li.activity span.autocompletion,
+.path-course-view li.activity form.togglecompletion {display:inline;position:absolute;right:-20px;top:0;z-index:10;padding:0.2em 0;}
+.path-course-view li.activity form.togglecompletion div {display:inline;}
+.path-course-view li.activity form.togglecompletion .ajaxworking {position:absolute;top:0; left:20px;width: 20px; height: 20px;background: url([[pix:i/ajaxloader]]) no-repeat;}
+.dir-rtl.path-course-view li.activity {margin-right:0px;margin-left:20px;}
+.dir-rtl.path-course-view li.activity form.togglecompletion,
+.dir-rtl.path-course-view li.activity span.autocompletion {right:auto;left:-20px;}
+
+.section img.movetarget {height:16px;width:80px;}
+
+#page-course-enrol .generalbox,
+#page-course-enrol .coursebox {margin-top: 20px;}
+
+#page-course-pending .singlebutton,
+#page-course-category #renameform,
+#page-course-category #themeform,
+#page-course-category #coursesearch,
+#page-course-category .singlebutton,
+#page-course-editsection .singlebutton {text-align:center;}
+
+#coursesearch,
+#coursesearch2 {margin-top: 1em;text-align:center;}
+
+#page-course-info .generalbox.icons {text-align: center;}
+#page-course-info .generalbox.info {margin-left:auto;margin-right:auto;}
+
+#page-course-pending .pendingcourserequests {margin-bottom: 1em;}
+#page-course-pending .pendingcourserequests .singlebutton {display: inline;}
+#page-course-pending .pendingcourserequests .cell {padding: 0 5px;}
+#page-course-pending .pendingcourserequests .cell.c6 {white-space: nowrap;}
+
+
+.coursebox {width: 100%;margin-bottom: 15px;}
+.coursebox .info {float: left;text-align:left;width: 40%;}
+.coursebox .summary {float: right;text-align:left;width: 55%;}
+.coursebox .summary .category {text-align:right;}
+.coursebox .teachers li {list-style-type:none;padding:0;margin:0;}
+
+.categorylist {
+	width: 100%;
+}
+
+.categorylist .category .numberofcourse {font-style: italic; font-size: 0.85em; font-style: normal;}
+
+.categorylist .category { /*carl - changes category list BG on all pages*/
+	padding-top: 5px; 
+	padding-bottom: 5px; 
+	
+}
+
+#page-site-index .categorybox { /*carl - changes category list BG on frontpages*/
+	border:1px dotted #ccc;
+	background:#e0ecfa;
+	padding-top: 10px; 
+	padding-bottom: 10px; 
+}
+
+#page-site-index .sitetopic { /*carl - changes frontpage site topic box containing icons html
+	border-bottom:#CCC dotted 1px;*/
+	margin-bottom:-10px;
+}
+
+#page-site-index #page-content { 
+	padding-top:15px;/*carl - alters gap between menu and blocks/content on frontpage only*/
+	background-color:#FFF; /*carl - alters all content BG on frontpage only*/
+	/*border:#ccc 1px solid; carl - adds border around main content in FF but not IE*/
+
+}
+
+#page-site-index #region-main {
+	padding-left:0px; /*carl - removes left padding from content on front page*/
+}
+
+.categorylist .category .info,
+.categorylist .category .indentation,
+.categorylist .category .name,
+.categorylist .category .image,
+.categorylist .course .name,
+.categorylist .course .info {float:left;text-align: left;}
+.categorylist .course {padding-left:18px;}
+
+.categorylist .indentation {padding-left: 20px;}
+#page-course-index .category .image {padding-right: 2px;}
+
+.course ul.section {margin:5px;padding:0;}
+
+.course-content ul.topics li.section { /*carl - topic areas on course pages - including side areas - default = none*/
+	border:#ccc 1px dotted;
+	background:#eff5fc;
+}
+
+.course-content ul.topics li.section .left { /*carl - removes BG from numbers on left side of week areas - default = none*/
+	background:none;
+}
+
+.course-content ul.weeks li.section { /*carl - week areas on course pages - including side areas - default = none*/
+	border:#ccc 1px dotted;
+	background:#eff5fc;
+}
+
+.course-content ul.weeks li.section .left { /*carl - removes BG from numbers on left side of topic areas - default = none*/
+	background:none;
+}
+
+.course-content ul.topics li.section .content { /*carl - alters width of center and allows changes to side bars in topic boxes*/
+	margin:0 35px;
+}
+
+.course-content ul.topics li.section .left { /*carl - changes width of left side bar in topic boxes*/
+	width:35px;
+}
+
+.course-content ul.topics li.section .right { /*carl - changes width of left side bar in topic boxes*/
+	width:35px;
+}
+
+.region-content .course-content { 
+	margin-top:-16px; /* carl - puts top of topics level with top of side blocks - default = none*/
+}
+
+.course-content ul.topics li.section .right { /*carl - removes BG from squares on right side of topic areas - default = none*/
+	background:none;
+}
+
+.course-content .summary { /*carl - changes top half of central topic boxes */
+}
+
+.weeks-format, /* Window-width: 800 pixels.IE doesn't support, see inline IE conditional comment. */
+.topics-format {margin-top: 8px;min-width: 763px;}
+.categoryboxcontent {border-width:1px;border-style:solid;}
+
+/* Course and category combo list on front page */
+.course_category_tree .controls {visibility: hidden;}
+.course_category_tree .controls div {display:inline;cursor:pointer;}
+.course_category_tree .category.with_children>.category_label {background-image:url([[pix:moodle|t/expanded]]);background-repeat: no-repeat;}
+.course_category_tree .category_label {padding-left:13px;}
+.course_category_tree .category .category {margin:5px;}
+.course_category_tree .category .courses {padding-left:16px;}
+.course_category_tree .category .courses .course_link {display:block;background-image:url([[pix:moodle|i/course]]);background-repeat: no-repeat;padding-left:18px;}
+.course_category_tree .category .course {position:relative;}
+.course_category_tree .category .course_info {position:absolute;right:0;top:0;}
+.course_category_tree .category .course_info a,
+.course_category_tree .category .course_info div {float:left;width:16px;height:16px;}
+.jsenabled .course_category_tree .controls {visibility: visible;}
+.jsenabled .course_category_tree .category.with_children.collapsed .category_label {background-image:url([[pix:moodle|t/collapsed]]);}
+.jsenabled .course_category_tree .category.with_children.collapsed .subcategories,
+.jsenabled .course_category_tree .category.with_children.collapsed .courses {display:none;}
+
+.path-course .clearfloat {float:none; clear:both;height:0px;}
+
+
+/*all courses view*/
+#page-course-index .categorylist .course.clearfloat { height: auto; }
+
+/**
+* Overide for RTL layout
+*/
+.dir-rtl .coursebox .info {float: right; text-align: right;}
+.dir-rtl .coursebox .summary {text-align:right;}
+.dir-rtl .course_category_tree .category.with_children> .category_label {background-position: center right; padding-right: 18px;}
+.dir-rtl .course_category_tree .category_label, .dir-rtl .course_category_tree .category .course {padding-right:18px;}
+.dir-rtl.jsenabled .course_category_tree .category.with_children.collapsed .category_label {background-image:url([[pix:moodle|t/collapsed_rtl]]);}
+.dir-rtl .course_category_tree .category .courses .course_link {background-position:center right; padding-right:18px;}
+.dir-rtl .clearfloat {float:none; clear:both;height:0px;}
+.dir-rtl .categorylist .category .info,
+.dir-rtl .categorylist .category .indentation,
+.dir-rtl .categorylist .category .name,
+.dir-rtl .categorylist .category .image,
+.dir-rtl .categorylist .course .name,
+.dir-rtl .categorylist .course .indentation,
+.dir-rtl .categorylist .course .info {float:right;text-align: right;}
+.dir-rtl .categorylist .course {padding-right:18px;}
+
+#page-course-index.dir-rtl .category .image {padding-left: 5px; padding-right: 0px;}
+#page-course-index.dir-rtl .indentation {padding-left: 0px;padding-right: 30px;}
+
+/****search results page****/
+
+#page-course-search .region-content .clearfix { /*carl - puts border around course name and category combined*/
+	border:1px dotted #ccc;
+	margin-bottom:3px;
+	background-color:#eff5fc; /*carl - adds BG colour to search results page*/
+	font-size:0.9em; /*carl - changes font size in search results page*/
+}
+
+#page-course-search .region-content a {
+	padding-right:10px; /*carl - puts padding around search listing link */
+	padding-left:10px;
+	color:#069; /*carl - changes search listing links colour*/
+	text-decoration:none; /*carl - changes search listing link decoration - removes underline*/
+}
+
+#page-course-search .region-content a:hover {
+	color:#900;
+}
+
+#page-course-search .no-overflow {
+	padding:0px;
+	margin:0px;
+}
+
+#page-course-search .name { /*carl - centres course name in box in search listing*/
+	margin:0px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+#page-course-search .category { /*carl - sets padding on right side of category text on search results page - default = no setting*/
+	margin:0px;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+
+#page-course-search .summary {
+	margin:0px;
+	padding:0px;
+}
+
+#page-course-search .spacer { /*carl - hides spacer image between courses in search listing*/
+	display:none;
+}
+
+#page-course-search .coursebox .info {  /*carl - sets padding on left side of module name on search results page - default = no setting*/
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+}
+
+/****course list page****/
+
+#page-course-index .categorylist { 
+	border:1px #ccc dotted;/*carl - adds dotted border around each category*/
+	background:#eff5fc;/*carl - adds BG around each category*/
+	padding-bottom:5px;
+	margin-bottom:5px;
+}
+
+#page-course-index .categorylist a:hover {
+	background:#FFF;
+}
+
+#page-course-index .course { /*carl - adjusts padding around each course name*/
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:35px; /*carl - creates indent on left-side of course name*/
+}
+
+#page-course-index .course a {
+	color:#005782;
+	text-decoration:none;
+	font-size:1.1em;
+}
+
+#page-course-index .course a:hover {
+	color:#900;
+	background:#FFF;
+}
+
+#page-course-index .main { 
+	margin-top:0px; /*lines top of heading with top of sideblock*/
+}
+
+#page-course-index #region-main {
+	padding-left:0px; /*carl - removes left padding from content on front page*/
+}
+
+#page-course-index #page-content #region-main {
+	margin-left:210px; /*carl adjusts left margin of main content to sdjust for width of left column*/
+}
+
+/*****fixes topic top block BG problems****/
+
+#page-course-view-topics .topics .content { /*carl - removes unwanted gap above and below links in top topic - messes with width of right and left sides
+	margin-left:42px;
+	margin-right:42px;*/
+	padding-top:10px;/*carl - adds space above topic summary or first activity*/
+	/*padding-right: 0px;
+	padding-bottom: 1px;
+	padding-left: 0px;*/
+}
+
+#page-course-view-topics .topics .content p {
+	font-weight:normal; /*carl - changes font weight of text in topic boxes - default = none*/
+	margin-top:5px; /*carl - fixes uneven gaps between top and bottom of label*/
+	margin-bottom:3px;
+}
+
+#page-course-view-topics .topics .content .no-overflow .no-overflow {
+	font-weight:normal; 
+	/*font-size:1.3em;carl - adjusts label text - looks smaller than summary text otherwise - default = none*/
+}
+
+#page-course-view-topics .topics .content h3 {
+	font-weight:bold; /*carl - changes font weight of topic box headings - default = none*/
+	margin-top:0px; /*carl - stops there being a gap between section heading and top of topic box*/
+	margin-bottom:0px; /*carl - stops there being a gap between section heading and top of topic box*/
+	padding-top:5px; /*carl adds gap above topic section titles without showing blue behind*/
+	padding-left:9px;
+}
+
+#page-course-view-topics .topics .content a:hover {
+	color:#900; /*carl - changes link colour of text in topic boxes on mouse hover - default = none*/
+}
+
+#page-course-view-topics .topics .content a {
+	color:#005782; /*carl - changes link colour of text in topic boxes - default = none*/
+	text-decoration:none;
+}
+
+#page-course-view-topics .topics .content a:hover {
+	color:#900; /*carl - changes link colour of text in topic boxes on mouse hover - default = none*/
+}
+
+#page-course-view-topics .topics .content a.dimmed:link {
+	color:#000; /*carl - changes link color for hidden activities*/
+}
+
+#page-course-view-topics .topics .content a.dimmed:hover {
+	color:#900; /*carl - changes hover color for hidden activities*/
+}
+
+#page-course-view-topics .topics .content a.dimmed:visited {
+	color:#000;/*carl - changes visited color for hidden activities*/
+}
+
+#page-course-view-topics #region-main {
+	padding-left:10px; /*carl - removes left padding from content on topics structure modules*/
+}
+
+#page-course-view-topics .topics .content .summary {
+	/*font-size:1.1em; carl - summary font size*/
+	font-weight:normal;
+	line-height:0px; /*carl - avoids large gap between topic/summary headers and resource links*/
+	/*padding-right:0px;carl - adjusts padding id topic section headings
+	padding-top:10px;
+	padding-bottom:0px;*/
+	padding-left:10px;
+}
+
+#page-course-view-topics .topics .content .summary .no-overflow {
+	line-height:1.2em; /*carl - changes position of topic heading summary text - overlaps if not set*/
+
+}
+
+#page-course-view-topics .topics .content .sectionname {
+	padding-right:0px;
+	padding-left:10px; /*carl - adjusts padding in topic section headings*/
+	padding-top:0px;
+	padding-bottom:0px;
+}
+
+#page-course-view-topics .topics .content ul li { /*increases gap between eack link in topic boxes*/
+	padding-bottom:5px;
+	font-size:0.85em;/*carl - changes text size of links in topic areas*/
+}
+
+#page-course-view-topics .unlist li {
+	line-height:1.5em; /*carl - increase lineheight in side blocks*/
+}
+
+#page-course-view-topics div.content ul { /*carl - increases gap between eack link in topic boxes*/
+	margin:0px;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	list-style:none;/* carl - gets rid of circles next to activity links in topic areas but stops bulleted lists working in labels*/
+}
+
+#page-course-view-topics div.content .mod-indent ul {
+	list-style:inside disc; /*adds bullets to lists in labels without causing them to appear next to activities*/
+	font-size:1.2em;
+}
+
+#page-course-view-topics .course-content ul.topics li#section-0 .content { /*carl - effects top topic only*/
+	padding-bottom:10px;
+}
+
+#page-course-view-weeks .weeks .content { /*carl - removes unwanted gap above and below links weekly structure - messes with width of right and left sides*/
+	margin-left:42px;
+	margin-right:42px;
+	padding-top:1px;
+	padding-right: 0px;
+	padding-bottom: 1px;
+	padding-left: 5px;
+}
+
+#page-course-view-weeks div.content ul { /*carl - gets rid of bullet points next to activities/resources in weeks pages*/
+	list-style:none;
+}
+
+#page-course-view-weeks div.content .mod-indent ul {
+	list-style:inside disc; /*carl - adds bullets to lists in labels without causing them to appear next to activities*/
+	font-size:0.9em;/*carl - stops font shrinking - default = no setting*/
+}
+
+#page-course-view-weeks div.content ul { /*increases gap between eack link in topic boxes*/
+	margin:0px;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+}
+
+#page-course-view-weeks .weeks .content ul li { /*increases gap between eack link in week boxes*/
+	padding-bottom:5px;
+}
+
+#page-course-view-weeks #region-main {
+	padding-left:0px; /*carl - removes left padding from content on weeks structure module pages*/
+}
+
+#page-course-view-weeks .class {
+	margin:100px;
+}
+
+.availabilityinfo {
+	padding-left:21px; /*carl - indents info on file type etc below activity links*/
+}
+
+.mod-indent {
+	margin-bottom:3px; /*carl - increases gap below activity links in topic areas*/
+}
+
+
+li.section div.content h3:empty { /*carl - removes unnecessay gap above first activity in topic boxes*/
+	display:none;
+}

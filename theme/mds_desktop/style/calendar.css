@@ -1,0 +1,105 @@
+/** Calendar **/
+.calendartable {width: 100%;}
+
+.calendartable th,
+.calendartable td {
+	width:14%;
+	vertical-align:top;
+	text-align: center;
+	border:1px #ccc dotted; /*carl - changes table borders of main calendar - default = border-width:1px;*/
+}
+
+.calendartable th {
+	background:#e0ecfa; /*carl - changes headings BG in main calendar table - default = none*/
+}
+
+.calendar_event_course {
+	background-color:#e0ecfa; /*carl - changes BG of event days in mini calendar*/
+	
+}
+
+/*.calendar_event_course a:visited { carl - changes visited link color in mini calendar
+	color:#000;
+}*/
+
+.calendar_event_global {background-color:#D6F8CD;}
+.calendar_event_group {background-color:#FEE7AE;}
+.calendar_event_user {
+	background-color:#FF9; /*carl - changes user events BG - default = DCE7EC*/
+}
+
+.path-calendar .calendar-controls .previous,
+.path-calendar .calendar-controls .next,
+.path-calendar .calendar-controls .current {
+	display: block;
+	float: left;
+	width: 12%;
+	font-size:1.4em;
+}
+.path-calendar .calendar-controls .previous {text-align: left;}
+.path-calendar .calendar-controls .current {text-align: center;width: 76%;}
+.path-calendar .calendar-controls .next {text-align: right;}
+
+.path-calendar {}
+.path-calendar .maincalendar {vertical-align: top;padding:0;}
+.path-calendar .maincalendar .bottom {text-align: center;padding:5px 0 0 0;}
+.path-calendar .maincalendar .heightcontainer {height: 100%;position: relative;}
+.path-calendar .maincalendar .calendarmonth {width:98%;margin:10px auto;}
+.path-calendar .maincalendar .calendarmonth ul {margin:0;}
+.path-calendar .maincalendar .calendarmonth ul li {list-style-type:none;margin-top: 4px;}
+.path-calendar .maincalendar .calendarmonth td {height: 5em;}
+.path-calendar .maincalendar .calendar-controls .previous,
+.path-calendar .maincalendar .calendar-controls .next{width: 30%;}
+.path-calendar .maincalendar .calendar-controls .current {width: 39.95%;}
+.path-calendar .maincalendar .controls {width:98%;margin:10px auto;}
+.path-calendar .maincalendar .eventlist .event {width:100%;margin-bottom:10px;border-spacing:0px;border-collapse:separate;border-width:1px;border-style:dotted;border-color:#ccc;}
+.path-calendar .maincalendar .eventlist .event .topic .name {float:left;}
+.path-calendar .maincalendar .eventlist .event .topic .date {float:right;}
+.path-calendar .maincalendar .eventlist .event .course {float:left;clear:left;}
+.path-calendar .maincalendar .eventlist .event .side {width:32px;}
+.path-calendar .maincalendar .header {
+	overflow:hidden;
+	font-size:0.9em;
+}
+.path-calendar .maincalendar .header .buttons {float: right;}
+.path-calendar .filters table {border-collapse:separate;border-spacing: 2px;width: 100%;}
+#page-calendar-export .indent {padding-left: 20px;}
+
+.path-calendar .maincalendar .controls a {
+	color:#069; /*carl - changes colour of month controls links in main calendar - default = none*/
+	text-decoration:none; /*carl - removes underlining from month controls in main calendar - default = none*/
+	font-weight:bold; /*carl - changes month controls text to bold in main calendar - default = none*/
+}
+
+.path-calendar .maincalendar .controls a:hover {
+	color:#900; /*carl - changes colour of month controls in main calendar when mouse hovers - default = none*/
+}
+
+.path-calendar .filters table a {
+	color:#069; /*carl - changes colour of events controls links in main calendar - default = none*/
+	text-decoration:none; /*carl - removes underlining from events controls in main calendar - default = none*/
+	font-weight:bold; /*carl - changes events controls text to bold in main calendar - default = none*/
+}
+
+.path-calendar .filters table a:hover {
+	color:#900; /*carl - changes colour of events controls in main calendar when mouse hovers - default = none*/
+}
+
+.block .minicalendar {
+	width:100%;
+	margin:10px auto;
+	background:#fff;
+}
+
+.block .minicalendar th,
+.block .minicalendar td {padding:2px;font-size:0.9em;}
+.block .minicalendar td.weekend {color:#A00;}
+.block .calendar-controls .previous {text-align: left;display: block;float: left;width: 12%;}
+.block .calendar-controls .current {float:left;text-align: center;display: block;width:76%; font-size:1.15em;}
+.block .calendar-controls .next {text-align: right;display: block;float: left;width: 12%;}
+.block .filters table {border-collapse:separate;border-spacing: 2px;padding: 2px;width: 100%;}
+.block .content h3.eventskey {margin-top:0.5em;margin-bottom:0;margin-left:0.5em;}
+
+.block .minicalendar th, .block .minicalendar td { 
+	border:#ccc 1px solid; /*carl - changes border colour of block minicalendar*/
+}
